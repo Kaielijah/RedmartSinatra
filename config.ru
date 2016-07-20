@@ -7,7 +7,7 @@ Bundler.require
 require './models/user'
 
 # THIS IS THE CONTROLLER
-require './app'
+require './app.rb'
 
 # CLASS REFERS TO THE CLASS NAME IN app.rb
-run RedmartApp
+run RedmartSinatraApp

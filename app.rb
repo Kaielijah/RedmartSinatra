@@ -1,4 +1,4 @@
-class RedmartApp < Sinatra::Base
+class RedmartSinatraApp < Sinatra::Base
   get '/' do
     erb 'Hello world'
   end
@@ -13,20 +13,6 @@ class RedmartApp < Sinatra::Base
 
     erb :'users'
   end
-
-  # GET /books/1 GET BOOKS WITH ID 1
-  get '/users/:id' do
-    # some code here
-    erb :'users'
-  end
-
-
-
-
-
-
-
-
 
   # POST /books CREATE NEW BOOKS
 

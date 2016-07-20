@@ -1,3 +1,3 @@
 development:
   adapter: postgresql
-  database: bookr_development
+  database: redmart
