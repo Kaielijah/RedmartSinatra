@@ -1,6 +1,6 @@
 class RedmartSinatraApp < Sinatra::Base
   get '/' do
-    erb 'System online
+    erb 'System online'
   end
 
 
