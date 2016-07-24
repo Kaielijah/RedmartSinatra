@@ -1,3 +1,9 @@
 development:
   adapter: postgresql
   database: redmart
+
+production:
+  adapter: postgresql
+  database: dc9t3q7r2qdsqv
+  username: csksmppmyrsslh
+  password: l9RsKyutmd5bKu4zN480DS4Co0
