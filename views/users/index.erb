@@ -1,0 +1,60 @@
+<div class="container-fluid">
+
+    <h2>User's Data</h2>
+
+    <a id="adduser"class="pull-right btn-link" href="/users/new">Add User</a>
+
+
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Password</th>
+      <th>CreditCard Number</th>
+      <th>Action</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @users.each do |user| %>
+    <tr>
+      <td>
+        <%= user[:id] %>
+      </td>
+      <td>
+        <%= user[:name] %>
+      </td>
+      <td>
+        <%= user[:email] %>
+      </td>
+      <td>
+        <%= user[:password] %>
+      </td>
+      <td>
+        <%= user[:cc_number] %>
+      </td>
+      <td>
+        <a href="/users/<%= user[:id] %>">View</a> |
+        <a href="/users/<%= user[:id] %>/edit">Edit</a>
+        <!-- delete flow  -->
+        <td>
+        <div class="btn-group-vertical">
+        <form action="/users/<%= user[:id] %>" method="post">
+
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete">
+        </td>
+
+        </div>
+        </form>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+</div>

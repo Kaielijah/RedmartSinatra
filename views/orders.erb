@@ -1,0 +1,34 @@
+<h4>User's Order list</h4>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Order Date</th>
+      <th>User's id</th>
+      <th>Category name</th>
+      <th>Name</th>
+      <!-- t.date :order_date, null:false
+      t.integer :users_id, null:false
+      t.string :category_name, null:false
+      t.integer :products_id, null:false
+      t.string :products_description, null:false,  -->
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td>
+        <%= product[:id] %>
+      </td>
+      <td>
+        <%= product[:name] %>
+      </td>
+      <td>
+        <%= product[:description] %>
+      </td>
+
+    </tr>
+    <% end %>
+  </tbody>
+</table>

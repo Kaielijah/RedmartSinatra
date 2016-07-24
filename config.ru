@@ -5,9 +5,12 @@ Bundler.require
 
 # THIS IS THE MODEL
 require './models/user'
-
+require './models/product'
 # THIS IS THE CONTROLLER
-require './app.rb'
+require './app'
+require './controllers/products'
+require './controllers/users'
 
 # CLASS REFERS TO THE CLASS NAME IN app.rb
+use Rack::MethodOverride
 run RedmartSinatraApp

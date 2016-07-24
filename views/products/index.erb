@@ -1,0 +1,56 @@
+<div class="container-fluid">
+
+    <h2>Product Details</h2>
+
+    <a id="addproduct"class="pull-right btn-link" href="/products/new">Add product</a>
+
+
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Price</th>
+      <th>Action</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @products.each do |product| %>
+    <tr>
+      <td>
+        <%= product[:id] %>
+      </td>
+      <td>
+        <%= product[:name] %>
+      </td>
+      <td>
+        <%= product[:description] %>
+      </td>
+      <td>
+        <%= product[:price] %>
+      </td>
+      <td>
+        <a href="/products/<%= product[:id] %>">View</a> |
+        <a href="/products/<%= product[:id] %>/edit">Edit</a>
+        <!-- delete flow  -->
+        <td>
+        <div class="btn-group-vertical">
+        <form action="/products/<%= product[:id] %>" method="post">
+
+          <input type="hidden" name="_method" value="delete">
+          <input type="submit" value="Delete">
+        </td>
+
+        </div>
+        </form>
+      </td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+</div>

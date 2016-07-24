@@ -4,13 +4,4 @@ class RedmartSinatraApp < Sinatra::Base
   end
 
 
-  get '/users' do
-
-    @users = User.all
-
-    erb :'users'
-  end
-
-
-
 end
