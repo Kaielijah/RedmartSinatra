@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 # gem "rails"
-gem 'sinatra', '2.2.4'
+gem 'sinatra'
 gem 'rerun'
 gem 'sinatra-activerecord'
 gem 'rake'
