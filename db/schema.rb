@@ -36,9 +36,9 @@ ActiveRecord::Schema.define(version: 20160722003707) do
 
   create_table "orders", force: :cascade do |t|
     t.date     "order_date",           null: false
-    t.integer  "users_id",             null: false
+    t.integer  "users_id_id",          null: false
     t.string   "category_name",        null: false
-    t.integer  "products_id",          null: false
+    t.integer  "products_id_id",       null: false
     t.string   "products_description", null: false
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 20160722003707) do
     t.string   "email",      null: false
     t.integer  "password",   null: false
     t.integer  "cc_number",  null: false
+    t.integer  "address",    null: false
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -34,6 +34,7 @@ else
   erb :"products/new"
 end
 end
+# put '/products'
 
 put '/products/:id' do
 @updated_product = Product.find(params[:id])
