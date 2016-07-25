@@ -9,7 +9,7 @@ require 'faker'
   name: Faker::Name.name,
   email: Faker::Internet.email ,
   password: Faker::Internet.password,
-  cc_number: Faker::Business.credit_card_number)
+  cc_number: Faker::Business.credit_card_number),
   address: Faker::Address.street_address
 end
 

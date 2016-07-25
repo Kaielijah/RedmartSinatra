@@ -71,7 +71,7 @@ DEPENDENCIES
   pg
   rake
   rerun
-  sinatra
+  sinatra (~> 1.4, >= 1.4.7)
   sinatra-activerecord
   tux
 
