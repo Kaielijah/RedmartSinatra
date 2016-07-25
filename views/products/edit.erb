@@ -16,20 +16,20 @@
     <div class="form-group ">
       <label class="control-label col-sm-2" for="name">Name:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" value="<%= @product[:name] %>" >
+        <input type="text" class="form-control" name="product[name]" value="<%= @product[:name] %>" >
       </div>
     </div>
     <div class="form-group">
       <label class="control-label col-sm-2" >Description:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" value="<%= @product[:description] %>" >
+        <input type="text" class="form-control" name="product[description]" value="<%= @product[:description] %>" >
       </div>
     </div>
 
     <div class="form-group">
       <label class="control-label col-sm-2" >Price:</label>
       <div class="col-sm-5">
-        <input type="text" class="form-control" value="<%= @product[:price] %>" >
+        <input type="text" class="form-control" name="product[price]" value="<%= @product[:price] %>" >
       </div>
     </div>
     <div class="form-group">

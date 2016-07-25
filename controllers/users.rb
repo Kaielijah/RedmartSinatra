@@ -4,9 +4,9 @@ class RedmartSinatraApp < Sinatra::Base
 #show all users
 get '/users' do
   @user = User.all
-
   erb :'users/index'
 end
+
 get '/users/:id' do
 if params[:id] == 'new'
   erb :'users/new'

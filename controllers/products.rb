@@ -17,10 +17,6 @@ else
 end
 end
 
-get '/products/:id/edit' do
-  @product = Product.find(params[:id])
-  erb :'products/edit'
-end
 
 post '/products/new' do
 puts params[:product]
@@ -36,10 +32,15 @@ end
 end
 # put '/products'
 
+get '/products/:id/edit' do
+  @product = Product.find(params[:id])
+  erb :'products/edit'
+end
+
 put '/products/:id' do
 @updated_product = Product.find(params[:id])
 
-if @updated_product.update_attributes( params[:product] )
+if @updated_product.update_attributes(params[:product])
   redirect("/products")
 end
 end
